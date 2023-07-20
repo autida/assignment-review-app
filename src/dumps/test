@@ -1,0 +1,45 @@
+<div className="card">
+  <div className="card-header">
+    <h2 className="card-title">What is ARA?</h2>
+  </div>
+  <div className="card-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
+      metus ac consequat interdum, neque lectus eleifend mi, auctor faucibus
+      mauris sapien id tellus. Fusce consectetur ac ex id scelerisque.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Nulla facilisi. Proin sagittis mauris quis mauris
+      efficitur consectetur.
+    </p>
+  </div>
+</div>
+<div className="card">
+  <div className="card-header">
+    <h2 className="card-title">Why use ARA?</h2>
+  </div>
+  <div className="card-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
+      metus ac consequat interdum, neque lectus eleifend mi, auctor faucibus
+      mauris sapien id tellus. Fusce consectetur ac ex id scelerisque.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Nulla facilisi. Proin sagittis mauris quis mauris
+      efficitur consectetur.
+    </p>
+  </div>
+</div>
+<div className="card">
+  <div className="card-header">
+    <h2 className="card-title">Benefits of ARA?</h2>
+  </div>
+  <div className="card-content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
+      metus ac consequat interdum, neque lectus eleifend mi, auctor faucibus
+      mauris sapien id tellus. Fusce consectetur ac ex id scelerisque.
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+      ac turpis egestas. Nulla facilisi. Proin sagittis mauris quis mauris
+      efficitur consectetur.
+    </p>
+  </div>
+</div>

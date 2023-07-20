@@ -1,13 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Nunito:ital,wght@0,200;0,400;0,500;1,700&display=swap');
+:root {
+  --primary: #43B9AA;
+  --secondary: #fff;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Nunito', sans-serif;
+  background: var(--secondary);
+  overflow: auto; /* Enable scrolling */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Hide the scrollbar */
+body::-webkit-scrollbar {
+  width: 0em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+* {
+  color: black ;
+  margin: 0;
+}
+p {
+  margin: 20px 0;
+}
+button{
+  border: 0;
+  padding: 11px 20px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+  box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* header */
+header {
+  box-shadow: 17px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 12px 40px;
+  z-index: 10;
+  /* position: sticky; */
+  top: 1rem;
+}
+/* navbar */
+header nav {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: row;
+}
+header nav .navLink {
+  display: flex; /* To use flexbox for centering */
+  justify-content: center; /* Center the navigation links horizontally */
+  gap: 20px; /* Add some spacing between the navigation links */
+}
+
+header nav .brandName {
+  /* margin-right: auto; */
+  border-bottom: 3px solid var(--primary);
+}
+header nav .navLink a{
+  text-decoration: none;
+  padding: 2px 9px;
+  /* border-radius: 4px; */
+  cursor: pointer;
+}
+header nav .navLink a.active {
+  border-bottom: 3px solid var(--primary);
+}
+
+/* page content */
+main {
+  /* max-width: 1200px;
+  padding: auto;
+  margin: 40px auto; */
+  /* max-width: 1200px;
+  margin: 40px auto;
+  position: absolute; */
+  margin: 40px auto;
+  /* position: relative; */
+}
+
+/* help layout */
+.help-layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+.help-layout nav a{
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.help-layout nav a:hover{
+  border-color: var(--primary);
+}
+.help-layout nav a.active {
+  background: var(--primary);
+}
+
+/* faq */
+.faq .question {
+  background: rgba(0,0,0,0.2);
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* contact form */
+form {
+  margin-top: 30px;
+}
+form input, form label span, form textarea {
+  display: block;
+}
+form input, form textarea {
+  margin-bottom: 30px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+}
+form label span {
+  margin-bottom: 10px;
+}
+
+/* careers list */
+.careers > a {
+  display: block;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+.careers > a:hover p {
+  color: var(--primary);
+}
+.careers p {
+  margin: 0;
+}
+.careers > a p:last-child {
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+/* careers details */
+.career-details {
+  background: rgba(0,0,0,0.2);
+  padding:20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.breadcrumbs > * {
+  display: inline-block;
+  margin-right: 10px;
+}
+.breadcrumbs .crumb:after {
+  content: '>';
+  margin-left: 10px;
+}
+.breadcrumbs .crumb:last-child:after {
+  display: none;
+}
+.breadcrumbs .crumb a {
+  color: #ddd;
+}
+/* Card container */
+.card {
+  width: 260px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  animation: floatUp 1s ease-in-out;
+}
+
+/* Card header */
+.card-header {
+  text-align: center;
+}
+
+/* Card title */
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333333;
+}
+
+/* Card content */
+.card-content {
+  margin-top: 15px;
+  text-align: justify;
+}
+
+/* Card footer (e.g., actions or buttons) */
+.card-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Card button */
+.card-button {
+  background-color: #43B9AA;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect for the button */
+.card-button:hover {
+  background-color: #2E8E80;
+}
+
+/* Slogan Container styles */
+.slogan-container {
+  display: flex;
+    margin: 100px auto;
+    height: 50vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 6rem;
+    z-index: 2;
+}
+.sub-slog h4 {
+  color: rgba(0, 0, 0, 0.5);
+}
+div .slogan {
+ color: #2E8E80;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.jumbotronBackground {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  image-rendering: auto;
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+/* footer */
+footer {
+  /* background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  left: 0;
+  bottom: 0;
+  right: 0; */
+
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: static;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 16rem 0 5rem 0;
+}
+
+
+.try-now-button {
+  padding: 9px 20px !important; 
+  margin-top: 0 !important;
+}
+
+.floating-element {
+  width: 100px;
+  height: 100px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  position: relative;
+  animation: floatUp 1s ease-in-out;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#element2 {
+  animation-delay: 1.5s; /* Delay the animation by 2 seconds */
+}
+
+#element3 {
+  animation-delay: 2s; /* Delay the animation by 4 seconds */
 }
