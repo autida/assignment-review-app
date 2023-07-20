@@ -194,7 +194,8 @@ form label span {
   border-radius: 10px;
   box-shadow: 0 6px 7px rgba(0, 0, 0, 0.3);
   padding: 20px;
-  animation: floatUp 1s ease-in-out;
+  /* animation: floatUp 1s ease-in-out; */
+  opacity: 0;
 }
 
 /* Card header */
@@ -314,17 +315,6 @@ footer {
   margin-top: 0 !important;
 }
 
-.floating-element {
-  width: 100px;
-  height: 100px;
-  background-color: #007bff;
-  color: #ffffff;
-  text-align: center;
-  line-height: 100px;
-  border-radius: 50%;
-  position: relative;
-  animation: floatUp 1s ease-in-out;
-}
 
 @keyframes floatUp {
   0% {
@@ -332,11 +322,11 @@ footer {
     opacity: 0;
   }
   50% {
-    transform: translateY(0);
+    transform: translateY(-10px);
     opacity: 0.5;
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-20px);
     opacity: 1;
   }
 }
@@ -347,4 +337,13 @@ footer {
 
 #element3 {
   animation-delay: 2s; /* Delay the animation by 4 seconds */
+}
+
+.fade-in-element {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
 }

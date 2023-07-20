@@ -28,8 +28,8 @@ const RootLayout = () => {
       </main>
 
       <footer>
-        <p>Contact us at: contact@example.com</p>
-        <p>&copy; 2023 Your Website Name</p>
+        <p>Contact us at: autidaanalita@gmail.com</p>
+        <p>&copy; 2023 Assignment Review App</p>
       </footer>
     </div>
   );

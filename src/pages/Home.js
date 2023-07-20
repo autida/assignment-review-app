@@ -1,3 +1,5 @@
+import FadeInAfterScroll from "./components/FadeInAfterScroll";
+
 const Home = () => {
   return (
     <div className="home">
@@ -27,35 +29,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="card-container">
-        <div className="card">
-          <div className="card-header">
-            <h2 className="card-title">What is ARA?</h2>
-          </div>
-          <div className="card-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button className="card-button">Read more</button>
-          </div>
-        </div>
-        <div className="card" id="element2">
-          <div className="card-header">
-            <h2 className="card-title">Why use ARA?</h2>
-          </div>
-          <div className="card-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button className="card-button">Read more</button>
-          </div>
-        </div>
-        <div className="card" id="element3">
-          <div className="card-header">
-            <h2 className="card-title">Benefits of ARA?</h2>
-          </div>
-          <div className="card-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button className="card-button">Read more</button>
-          </div>
-        </div>
-      </div>
+      <FadeInAfterScroll />
     </div>
   );
 };
