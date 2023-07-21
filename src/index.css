@@ -3,6 +3,7 @@
 :root {
   --primary: #43B9AA;
   --secondary: #fff;
+  --tertiary: #253f3b;
 }
 body {
   margin: 0;
@@ -70,6 +71,9 @@ header nav .navLink {
 header nav .brandName {
   /* margin-right: auto; */
   border-bottom: 3px solid var(--primary);
+}
+.brandName h1 {
+  color: var(--tertiary);
 }
 header nav .navLink a{
   text-decoration: none;
@@ -250,10 +254,20 @@ form label span {
     z-index: 2;
 }
 .sub-slog h4 {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--tertiary);
+  opacity: 0.7;
+  font-size: 0.75rem;
 }
 div .slogan {
- color: #2E8E80;
+ color: var(--primary);
+}
+div .slogan h1 {
+  color: var(--tertiary);
+  font-size: 3rem;
+}
+div .slogan h3 {
+  color: var(--tertiary);
+  font-size: 1.5rem;
 }
 
 .home {
@@ -317,16 +331,12 @@ footer {
 
 
 @keyframes floatUp {
-  0% {
-    transform: translateY(0);
+  from {
+    transform: translateY(50px);
     opacity: 0;
   }
-  50% {
-    transform: translateY(-10px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-20px);
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -346,4 +356,116 @@ footer {
 
 .fade-in-visible {
   opacity: 1;
+}
+
+
+/* samp animation */
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 14rem 13rem;
+  
+}
+.divider h1,h3 {
+  color: var(--tertiary);
+ 
+}
+.img-what {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.animation-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.left-container,
+.right-container {
+  display: flex;
+  font-size: 16px;
+  opacity: 0;
+  flex-direction: column;
+  color: var(--tertiary);
+}
+
+.left-container {
+  width: 45%;
+}
+
+.right-container {
+  width: 35%;
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.left-container.showAnimation {
+  animation: slideLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.right-container.showAnimation {
+  animation: slideRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    margin-left: -100px; /* Starting position from the left */
+    opacity: 0;
+  }
+  to {
+    margin-left: 0; /* Center position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    margin-right: -100px; /* Starting position from the right */
+    opacity: 0;
+  }
+  to {
+    margin-right: 0; /* Center position */
+    opacity: 1;
+  }
+}
+.left-container h2 {
+  color: var(--tertiary);
+  font-size: 30px;
+}
+
+/* Raidrop effect */
+.raindrop-text {
+  font-size: 48px;
+  position: relative;
+  text-align: center;
+}
+
+.raindrop {
+  position: absolute;
+  width: 3px;
+  height: 10px;
+  background-color: #1387c7;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: dropAnimation 2s linear infinite;
+}
+
+@keyframes dropAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
 }

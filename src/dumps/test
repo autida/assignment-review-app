@@ -3,7 +3,7 @@
     <h2 className="card-title">What is ARA?</h2>
   </div>
   <div className="card-content">
-    <p>
+    <p className="">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
       metus ac consequat interdum, neque lectus eleifend mi, auctor faucibus
       mauris sapien id tellus. Fusce consectetur ac ex id scelerisque.
@@ -43,3 +43,73 @@
     </p>
   </div>
 </div>
+
+<!-- diff -->
+.animation-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.left-container,
+.right-container {
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; */
+  display: flex;
+  font-size: 16px;
+  opacity: 0;
+  padding: 16px;
+  flex-direction: column;
+  color: var(--tertiary);
+}
+
+
+.left-container {
+  width: 45%;
+}
+.right-container {
+  width: 35%;
+  /* height: 23rem; */
+}
+.left-container.showAnimation {
+  animation: slideLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.right-container.showAnimation {
+  animation: slideRight 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    left: -100px; /* Starting position from the left */
+    opacity: 0;
+  }
+  to {
+    left: calc(20% - 100px); /* Center position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    right: -100px; /* Starting position from the right */
+    opacity: 0;
+  }
+  to {
+    right: calc(20% - 100px); /* Center position */
+    opacity: 1;
+  }
+}
