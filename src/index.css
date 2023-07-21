@@ -469,3 +469,42 @@ footer {
     transform: translateY(50px);
   }
 }
+/* Benefit */
+.b-container {
+  height: 20rem;
+  background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+
+/* review */
+.review-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.review-hdr, .review-dtl {
+  color: white;
+ }
+ .stars-wrapper {
+   display: flex;
+   justify-content: center;
+ }
+ .stars {
+   width: 13rem;
+ }
+ .review-dtl {
+  margin: 30px;
+  width: 32rem;
+  text-align: center;
+ }
+ .review-hdr {
+  font-size: 32px;
+ }
