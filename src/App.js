@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path={projectName + "/about"} element={<About />} />
       <Route path={projectName + "/service"} element={<Service />} />
       <Route path={projectName + "/contact"} element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path={projectName + "/*"} element={<NotFound />} />
     </Route>
   )
 );
