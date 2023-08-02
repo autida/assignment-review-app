@@ -10,7 +10,7 @@ const RootLayout = () => {
               <img src="assets/logo.png" alt="Ara-logo" className="logo" />
             </div>
             <div className="navLink">
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="assignment-review-app">Home</NavLink>
               <NavLink to="about">About</NavLink>
               <NavLink to="service">Service</NavLink>
               <NavLink to="contact">Contact</NavLink>
