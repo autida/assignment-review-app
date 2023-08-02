@@ -3,15 +3,44 @@
 :root {
   --primary: #43B9AA;
   --secondary: #fff;
-  --tertiary: #253f3b;
+  --tertiary: #2a403d;
+  --common: #000;
+  --minimum-font-size: 16px;
+  --mid-font-size: 22px;
+  --max-mid-font-size:30px;
+  --max-font-size:36px;
+  --primary-font-family: 'Poppins', sans-serif;
+  --secondary-font-family: 'Montserrat', sans-serif;
 }
-body {
+* {
+  padding:0;
+}
+ body {
   margin: 0;
-  padding: 20px;
+  padding: 0;
   /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Nunito', sans-serif;
-  background: var(--secondary);
+  font-family: var(--primary-font-family);
+  /* background: var(--secondary); */
+  background: linear-gradient(to right,
+  rgb(241 241 241),
+  rgb(238 238 238), 
+  rgb(233 233 233),
+  rgb(231 232 234));
   overflow: auto; /* Enable scrolling */
+ 
+}
+
+/* TEXT FORMAT */
+.heading1 {
+  font-size: var(--max-font-size);
+  /* color:var(--tertiary); */
+  /* font-weight: 800; */
+}
+
+.heading2 {
+  font-size: var(--mid-font-size);
+  color:var(--tertiary);
+  font-weight: 400;
 }
 
 /* Hide the scrollbar */
@@ -28,7 +57,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 * {
-  color: black ;
+  color: var(--tertiary) ;
   margin: 0;
 }
 p {
@@ -48,11 +77,15 @@ button{
 }
 /* header */
 header {
-  box-shadow: 17px 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 12px 40px;
+  padding: 15px 40px;
   z-index: 10;
-  /* position: sticky; */
-  top: 1rem;
+  position: absolute;
+  /* top: 1rem; */
+  width: 92%;
+}
+.logo {
+  width: inherit;
+  height: inherit;
 }
 /* navbar */
 header nav {
@@ -61,6 +94,7 @@ header nav {
   justify-content: space-between;
   margin: 0 auto;
   flex-direction: row;
+  align-items: baseline;
 }
 header nav .navLink {
   display: flex; /* To use flexbox for centering */
@@ -69,8 +103,7 @@ header nav .navLink {
 }
 
 header nav .brandName {
-  /* margin-right: auto; */
-  border-bottom: 3px solid var(--primary);
+  width: 150px;
 }
 .brandName h1 {
   color: var(--tertiary);
@@ -81,8 +114,12 @@ header nav .navLink a{
   /* border-radius: 4px; */
   cursor: pointer;
 }
-header nav .navLink a.active {
+header nav .navLink :hover {
   border-bottom: 3px solid var(--primary);
+}
+
+header nav .navLink a.active {
+  font-weight: 800;
 }
 
 /* page content */
@@ -93,7 +130,7 @@ main {
   /* max-width: 1200px;
   margin: 40px auto;
   position: absolute; */
-  margin: 40px auto;
+  /* margin: 40px auto; */
   /* position: relative; */
 }
 
@@ -210,8 +247,8 @@ form label span {
 /* Card title */
 .card-title {
   margin: 0;
-  font-size: 24px;
-  color: #333333;
+  font-size: var(--mid-font-size);
+  color: var(--tertiary);
 }
 
 /* Card content */
@@ -233,7 +270,7 @@ form label span {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: var(--minimum-font-size);
   cursor: pointer;
 }
 
@@ -245,37 +282,60 @@ form label span {
 /* Slogan Container styles */
 .slogan-container {
   display: flex;
-    margin: 100px auto;
     height: 50vh;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     padding: 0 6rem;
-    z-index: 2;
+    /* z-index: 1; */
 }
 .sub-slog h4 {
   color: var(--tertiary);
-  opacity: 0.7;
-  font-size: 0.75rem;
+  font-size: var(--minimum-font-size);
 }
 div .slogan {
- color: var(--primary);
+ color: var(--tertiary);
 }
 div .slogan h1 {
   color: var(--tertiary);
-  font-size: 3rem;
+  font-size: var(--max-font-size);
 }
 div .slogan h3 {
   color: var(--tertiary);
-  font-size: 1.5rem;
+  font-size: var(--mid-font-size);
 }
+/* HOME */
 
 .home {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 80px;
 }
+.hero-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/public/assets/image8.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  /* Set the desired opacity value (0 to 1) */
+  opacity: 0.5; /* Change this value to adjust the opacity */
+  /* Set the color you want for the overlay */
+  background-color: rgba(243, 238, 238, 0.5); /* Change the RGB values and alpha (0 to 1) */
+}
+
 .jumbotronBackground {
   position: absolute;
   top: 5rem;
@@ -307,8 +367,8 @@ footer {
   background-color: #f0f0f0;
   padding: 10px;
   text-align: center;
-  color: #555;
-  font-size: 14px;
+  color: var(--tertiary);
+  font-size: var(--minimum-font-size);
   left: 0;
   bottom: 0;
   right: 0;
@@ -382,30 +442,29 @@ footer {
 }
 .animation-container {
   display: flex;
+  padding: 0px 80px;
+  align-items: center;
+  gap: 10px;
+  /* align-self: stretch */;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 6rem;
+  justify-content: center;
+  background-color: white;
 }
 
 .left-container,
 .right-container {
-  display: flex;
-  font-size: 16px;
-  opacity: 0;
-  flex-direction: column;
-  color: var(--tertiary);
 }
 
 .left-container {
-  width: 45%;
+  /* width: 35%; */
+  /* background-color: var(--primary); */
+  /* border-radius: 10px; */
+
 }
 
 .right-container {
-  width: 35%;
-  background-color: var(--primary);
-  border-radius: 10px;
+  width: 50%;
 }
 
 .left-container.showAnimation {
@@ -441,33 +500,7 @@ footer {
 }
 .left-container h2 {
   color: var(--tertiary);
-  font-size: 30px;
-}
-
-/* Raidrop effect */
-.raindrop-text {
-  font-size: 48px;
-  position: relative;
-  text-align: center;
-}
-
-.raindrop {
-  position: absolute;
-  width: 3px;
-  height: 10px;
-  background-color: #1387c7;
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: dropAnimation 2s linear infinite;
-}
-
-@keyframes dropAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(50px);
-  }
+  font-size: var(--mid-font-size);
 }
 /* Benefit */
 .b-container {
@@ -506,5 +539,333 @@ footer {
   text-align: center;
  }
  .review-hdr {
-  font-size: 32px;
+  font-size: var(--max-font-size);
  }
+
+
+
+/* tricolumn */
+.tc-heading {
+  flex: 1 0 0;
+  /* align-self: stretch */;
+  color: var(--tertiary);
+  text-align: center;
+  font-family: Poppins;
+  font-size: var(--max-mid-font-size);
+  font-style: normal;
+  /* font-weight: 600; */
+  line-height: normal;
+}
+.tc-header {
+  display: flex;
+  /* padding: 80px 0px; */
+  align-items: center;
+  gap: 10px;
+  /* align-self: stretch */;
+}
+.tc-wrapper {
+  display: flex;
+  padding: 0px 80px;
+  flex-direction: column;
+  align-items: center;
+  /* align-self: stretch */;
+}
+
+.tc-content {
+  display: flex;
+  /* width: 1288px; */
+  padding: 40px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+.tc-content-icons {
+  
+}
+.tc-content-first {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* align-self: stretch */;
+  border-radius: 10px;
+  /* background: #FFF;  */
+}
+.tc-group {
+  width: 240px;
+  height: 153.375px;
+}
+.tc-card-cta,
+.tc-card-content,
+.tc-card-header {
+  font-style: normal;
+  line-height: normal;
+}
+.tc-card-cta,
+.tc-card-header {
+  color: var(--tertiary);
+}
+.tc-card-cta,
+.tc-card-content {
+  font-size: var(--minimum-font-size);
+}
+.tc-card-content{
+  color: var(--common);
+}
+.tc-card-header{
+  font-size: var(--mid-font-size);
+}
+.tc-content-second {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* align-self: stretch */;
+}
+.tc-content-third {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* align-self: stretch */;
+}
+
+/* Two Column */
+.twc-wrapper {
+  display: flex;
+  padding: 80px 80px;
+  align-items: center;
+  /* align-self: stretch */;
+}
+.twc-img {
+  flex: 1 0 0;
+  /* align-self: stretch */;  
+}
+.twc-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 0;
+  flex-wrap: wrap;
+}
+.twc-text-heading {
+  /* align-self: stretch */
+  color: var(--tertiary);
+  font-size: var(--max-mid-font-size);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.twc-text * {
+  margin: 0;
+}
+.footerBar {
+  display: flex;
+  height: 306px;
+  padding: 0px 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: var(--primary);
+  opacity: .7;
+}
+/* footer */
+footer {
+  display: flex;
+  padding: 0px 80px;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.footer {
+  display: flex;
+  padding: 17.154px 689.563px 18.154px 0px;
+  align-items: center;
+  flex: 1 0 0;
+}
+.sideText {
+  content: "Design with love © ARAStudio 2020. All right reserved";
+  color: #92989F;
+  text-align: right;
+  font-family: Jost;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.257px;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+/* About */
+.about,
+.contact,
+.service {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.bg-img {
+  padding:0 80px;
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  background-image: url(/public/assets/image8.jpg);
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-name {
+  font-size: var(--max-mid-font-size);
+  font-weight: 600;
+}
+.some-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* align-self: stretch */;
+  padding:80px;
+}
+.c-contacts{
+  display: flex;
+  height: 566px;
+  padding: 100px 0px;
+  align-items: center;
+  /* align-self: stretch */;
+}
+.c-icons {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex: 1 0 0;
+  /* align-self: stretch */;
+  flex-wrap: wrap;
+}
+/* Two Column */
+.two-col-wrapper {
+  display: flex;
+  padding: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* align-self: stretch */;
+}
+.two-col-text-heading {
+  color: var(--tertiary);
+  font-size: var(--max-mid-font-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.two-col-text-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  /* align-self: stretch */;
+  padding:40px;
+}
+/* Image Form */
+.img-form {
+  display: flex;
+  /* height: 100vh; */
+  padding: 100px 250px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  /* align-self: stretch */;
+  flex-wrap: wrap;
+}
+.img-frame {
+  display: flex;
+  padding: 7px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+}
+.form-frame {
+  display: flex;
+  padding: 0px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  /* align-self: stretch */;
+}
+.welcome-ara {
+  display: flex;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  /* align-self: stretch */;
+}
+.if-logo{
+  width: 103px;
+  height: 30px; 
+}
+.if-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* align-self: stretch */;
+}
+.if-cta {
+  width: 100%;
+}
+.if-cta {
+  /* width: 100%; */
+}
+/* FORM */
+/* .if-form-control {
+  display: flex;
+  height: 36px;
+  padding: 4px 10px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch ;
+/* }  */
+.if-form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--tertiary)
+}
+.if-form-control:hover
+/* .if-form-control:focus */
+{
+  border: 1px solid var(--primary);
+  outline: none;
+}
+.if-form-control:active,
+.if-form-control:focus-within{
+  /* border: 1px solid var(--primary); */
+  outline: none;
+  /* box-shadow: 0px 0 5px 0px rgba(0, 0, 0, 0.74) inset; */
+}

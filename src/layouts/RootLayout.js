@@ -7,13 +7,13 @@ const RootLayout = () => {
         <header>
           <nav>
             <div className="brandName">
-              <h1>ARA</h1>
+              <img src="assets/logo.png" alt="Ara-logo" className="logo" />
             </div>
             <div className="navLink">
               <NavLink to="/">Home</NavLink>
               <NavLink to="about">About</NavLink>
-              <NavLink to="help">Help</NavLink>
-              <NavLink to="careers">Careers</NavLink>
+              <NavLink to="service">Service</NavLink>
+              <NavLink to="contact">Contact</NavLink>
             </div>
             <div className="register-login">
               <button className="try-now-button">Try now</button>
@@ -22,14 +22,21 @@ const RootLayout = () => {
           {/* <Breadcrumbs /> */}
         </header>
       </div>
-
       <main>
         <Outlet />
       </main>
 
       <footer>
-        <p>Contact us at: autidaanalita@gmail.com</p>
-        <p>&copy; 2023 Assignment Review App</p>
+        <div className="footer">
+          <img
+            src="assets/logo.png"
+            alt="Create icon"
+            className="footer-logo"
+          />
+        </div>
+        <p className="sideText">
+          Design with love © ARAStudio 2020. All right reserved
+        </p>
       </footer>
     </div>
   );

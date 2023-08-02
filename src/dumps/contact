@@ -1,0 +1,76 @@
+<div className="contacts-wrapper">
+          <div className="contact-card">
+            <div className="contact-card-content">
+              <img
+                src="assets/telephone.png"
+                alt="Telephone icon"
+                className="contact-img"
+              />
+              {/* <p className="">Analita Autida</p> */}
+              <p className="">
+                <b>012-012-0123</b>
+              </p>
+            </div>
+          </div>
+          <div className="contact-card">
+            <div className="contact-card-content">
+              <img
+                src="assets/email.png"
+                alt="Email icon"
+                className="contact-img"
+              />
+              <p className="">
+                <u>
+                  <b>autidaanalita@gmail.com</b>
+                </u>
+              </p>
+            </div>
+          </div>
+          <div className="contact-card">
+            <div className="contact-card-content">
+              <img
+                src="assets/linkedin.png"
+                alt="Email icon"
+                className="contact-img"
+              />
+              <p className="">
+                <a href="https://www.linkedin.com/in/analitaautida/">
+                  <b>analita Autida</b>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        /* Contact */
+        /* .contact {
+         padding: 2rem 4rem;
+         color: var(--tertiary);
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         justify-content: center;
+        }
+        .contacts-wrapper {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+        }
+        .contact-card{
+         width: 200px;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         align-content: center;
+         align-items: center;
+       }
+       .contact-img {
+         height: 5rem; 
+       }
+       .contact-card-content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+       } */

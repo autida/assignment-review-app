@@ -30,6 +30,12 @@ const WhatWhyBen = () => {
         className={`left-container ${showAnimation ? "showAnimation" : ""}`}
         ref={fadeInRef}
       >
+        <img src="assets/what.png" alt="What Background" className="img-what" />
+      </div>
+      <div
+        className={`right-container ${showAnimation ? "showAnimation" : ""}`}
+        ref={fadeInRef}
+      >
         <h2>What is ARA?</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
@@ -37,24 +43,16 @@ const WhatWhyBen = () => {
           mauris sapien id tellus. Fusce consectetur ac ex id scelerisque.
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Nulla facilisi. Proin sagittis mauris quis
-          mauris efficitur consectetur. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed gravida, metus ac consequat interdum, neque
-          lectus eleifend mi, auctor faucibus mauris sapien id tellus. Fusce
-          consectetur ac ex id scelerisque. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas.
-          Nulla facilisi. Proin sagittis mauris quis mauris efficitur
-          consectetur.
+          mauris efficitur consectetur.
         </p>
-      </div>
-      <div
-        className={`right-container ${showAnimation ? "showAnimation" : ""}`}
-        ref={fadeInRef}
-      >
-        <img
-          src="assets/image10.jpg"
-          alt="What Background"
-          className="img-what"
-        />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida,
+          metus ac consequat interdum, neque lectus eleifend mi, auctor faucibus
+          mauris sapien id tellus. Fusce consectetur ac ex id scelerisque.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Nulla facilisi. Proin sagittis mauris quis
+          mauris efficitur consectetur.
+        </p>
       </div>
     </div>
   );
