@@ -1,4 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
+import packageJson from "../../package.json";
+const projectName = packageJson.name;
 
 const RootLayout = () => {
   return (
