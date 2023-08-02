@@ -19,12 +19,12 @@ import Service from "./pages/Service";
 const projectName = packageJson.name;
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path={"/"} element={<RootLayout />}>
+    <Route path={projectName + "/"} element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path={projectName + "/about"} element={<About />} />
-      <Route path={projectName + "/service"} element={<Service />} />
-      <Route path={projectName + "/contact"} element={<Contact />} />
-      <Route path={projectName + "/*"} element={<NotFound />} />
+      <Route path={"/about"} element={<About />} />
+      <Route path={"/service"} element={<Service />} />
+      <Route path={"/contact"} element={<Contact />} />
+      <Route path={"*"} element={<NotFound />} />
     </Route>
   )
 );
