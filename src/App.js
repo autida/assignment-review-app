@@ -4,6 +4,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+import packageJson from "../package.json";
 
 //layouts
 import RootLayout from "./layouts/RootLayout";
@@ -15,13 +16,14 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Service from "./pages/Service";
 
+const projectName = packageJson.name;
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path={projectName + "/"} element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/service" element={<Service />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path={projectName + "/about"} element={<About />} />
+      <Route path={projectName + "/service"} element={<Service />} />
+      <Route path={projectName + "/contact"} element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
