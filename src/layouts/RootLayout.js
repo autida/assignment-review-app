@@ -12,7 +12,6 @@ const RootLayout = () => {
               <img src="assets/logo.png" alt="Ara-logo" className="logo" />
             </div>
             <div className="navLink">
-              <BrowserRouter basename="/assignment-review-app" />
               <NavLink to={"/"}>Home</NavLink>
               <NavLink to={"/about"}>About</NavLink>
               <NavLink to={"/service"}>Service</NavLink>
