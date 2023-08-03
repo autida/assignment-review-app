@@ -16,7 +16,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Service from "./pages/Service";
 
-const projectName = packageJson.name;
+const projectName = packageJson.homepage;
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path={"/"} element={<RootLayout />}>
