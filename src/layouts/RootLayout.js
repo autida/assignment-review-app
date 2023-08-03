@@ -13,7 +13,7 @@ const RootLayout = () => {
             </div>
             <div className="navLink">
               <NavLink to={"/"}>Home</NavLink>
-              <NavLink to={"/assignment-review-app/about"}>About</NavLink>
+              <NavLink to={"/about"}>About</NavLink>
               <NavLink to={"/service"}>Service</NavLink>
               <NavLink to={"/contact"}>Contact</NavLink>
             </div>
