@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/assignment-review-app/static/css/main.1cb522a7.css",
-    "main.js": "/assignment-review-app/static/js/main.f0088529.js",
-    "static/js/787.218e7b7f.chunk.js": "/assignment-review-app/static/js/787.218e7b7f.chunk.js",
-    "static/media/image8.jpg": "/assignment-review-app/static/media/image8.63066cb37f5ccfd6a315.jpg",
-    "index.html": "/assignment-review-app/index.html",
-    "main.1cb522a7.css.map": "/assignment-review-app/static/css/main.1cb522a7.css.map",
-    "main.f0088529.js.map": "/assignment-review-app/static/js/main.f0088529.js.map",
-    "787.218e7b7f.chunk.js.map": "/assignment-review-app/static/js/787.218e7b7f.chunk.js.map"
+    "main.css": "./static/css/main.e6e58381.css",
+    "main.js": "./static/js/main.2529cd75.js",
+    "static/js/787.218e7b7f.chunk.js": "./static/js/787.218e7b7f.chunk.js",
+    "static/media/image8.jpg": "./static/media/image8.63066cb37f5ccfd6a315.jpg",
+    "index.html": "./index.html",
+    "main.e6e58381.css.map": "./static/css/main.e6e58381.css.map",
+    "main.2529cd75.js.map": "./static/js/main.2529cd75.js.map",
+    "787.218e7b7f.chunk.js.map": "./static/js/787.218e7b7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cb522a7.css",
-    "static/js/main.f0088529.js"
+    "static/css/main.e6e58381.css",
+    "static/js/main.2529cd75.js"
   ]
 }
