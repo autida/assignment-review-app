@@ -12,10 +12,10 @@ const RootLayout = () => {
               <img src="assets/logo.png" alt="Ara-logo" className="logo" />
             </div>
             <div className="navLink">
-              <NavLink to={"/"}>Home</NavLink>
-              <NavLink to={"/about"}>About</NavLink>
-              <NavLink to={"/service"}>Service</NavLink>
-              <NavLink to={"/contact"}>Contact</NavLink>
+              <NavLink to={projectName + "/"}>Home</NavLink>
+              <NavLink to={projectName + "/about"}>About</NavLink>
+              <NavLink to={projectName + "/service"}>Service</NavLink>
+              <NavLink to={projectName + "/contact"}>Contact</NavLink>
             </div>
             <div className="register-login">
               <button className="try-now-button">Try now</button>
