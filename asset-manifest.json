@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/assignment-review-app/static/css/main.1cb522a7.css",
-    "main.js": "/assignment-review-app/static/js/main.d12b96ba.js",
+    "main.js": "/assignment-review-app/static/js/main.573a6d9d.js",
     "static/js/787.218e7b7f.chunk.js": "/assignment-review-app/static/js/787.218e7b7f.chunk.js",
     "static/media/image8.jpg": "/assignment-review-app/static/media/image8.63066cb37f5ccfd6a315.jpg",
     "index.html": "/assignment-review-app/index.html",
     "main.1cb522a7.css.map": "/assignment-review-app/static/css/main.1cb522a7.css.map",
-    "main.d12b96ba.js.map": "/assignment-review-app/static/js/main.d12b96ba.js.map",
+    "main.573a6d9d.js.map": "/assignment-review-app/static/js/main.573a6d9d.js.map",
     "787.218e7b7f.chunk.js.map": "/assignment-review-app/static/js/787.218e7b7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1cb522a7.css",
-    "static/js/main.d12b96ba.js"
+    "static/js/main.573a6d9d.js"
   ]
 }
